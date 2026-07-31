@@ -78,8 +78,12 @@
     }
     .btn-ios {
       background: linear-gradient(135deg, #2c2c2e, var(--ios));
+      opacity: .75;
+      cursor: default;
+      border-style: dashed;
     }
     .btn:hover { filter: brightness(1.08); }
+    .btn-ios:hover { filter: none; }
     .note { font-size: .85rem; margin-top: 18px; color: var(--muted); }
     .link {
       display: block;
@@ -98,7 +102,7 @@
     </div>
     <img class="icon" src="app_icon.png" alt="المسلم الشامل" onerror="this.style.display='none'" />
     <h1>المسلم الشامل</h1>
-    <p>القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية<br/>الإصدار 1.0.3 — بواسطة Ahmed Elshahat</p>
+    <p>القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية<br/>الإصدار 1.0.4 — بواسطة Ahmed Elshahat</p>
 
     <div class="btns">
       <a
@@ -109,21 +113,14 @@
         rel="noopener noreferrer"
       >⬇️ تحميل Android</a>
 
-      <a
-        id="iosBtn"
-        class="btn btn-ios"
-        href="./ios/"
-      >🍎 فتح نسخة iPhone</a>
+      <span class="btn btn-ios" aria-disabled="true">🍎 iPhone — قريباً إن شاء الله</span>
     </div>
 
     <a class="link" href="https://www.mediafire.com/file/0ghelpr4v2j8z2p/muslim_shamel.apk/file" target="_blank" rel="noopener noreferrer">
-      أو افتح رابط MediaFire (Android) من هنا
+      أو افتح رابط MediaFire من هنا
     </a>
 
-    <p class="note">
-      Android: مجاني بالكامل — لو ظهر تحذير اختر «تثبيت على أي حال».<br/>
-      iPhone: افتح النسخة من سفاري ثم «مشاركة → إضافة إلى الشاشة الرئيسية» عشان تبقى زي التطبيق.
-    </p>
+    <p class="note">مجاني بالكامل — لو ظهر تحذير من النظام اختر «تثبيت على أي حال» لأن التطبيق خارج متجر بلاي.</p>
   </div>
 
   <script>
