@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>المسلم الشامل — تحميل التطبيق</title>
+  <style>
+    :root {
+      --bg: #060d1a;
+      --card: #111d2e;
+      --green: #1a6b45;
+      --gold: #d4af37;
+      --text: #eee8d8;
+      --muted: #9ca3af;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: radial-gradient(ellipse at top, #0d3d25 0%, var(--bg) 55%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      width: min(420px, 100%);
+      background: var(--card);
+      border: 1px solid #1e2d45;
+      border-radius: 24px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+    }
+    img.icon {
+      width: 96px; height: 96px;
+      border-radius: 22px;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+    }
+    h1 { color: var(--gold); margin: 16px 0 4px; font-size: 1.6rem; }
+    p { color: var(--muted); line-height: 1.7; margin: 8px 0 20px; }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--green), #0a3d25);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: 1px solid var(--gold);
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .note { font-size: .85rem; margin-top: 18px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="icon" src="app_icon.png" alt="المسلم الشامل" />
+    <h1>المسلم الشامل</h1>
+    <p>القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية<br/>الإصدار 1.0.2 — بواسطة Ahmed Elshahat</p>
+    <a class="btn" href="muslim_shamel.apk" download>⬇️ تحميل التطبيق (Android)</a>
+    <p class="note">مجاني بالكامل — لو ظهر تحذير من النظام اختر «تثبيت على أي حال» لأن التطبيق خارج متجر بلاي.</p>
+  </div>
+</body>
+</html>
