@@ -34,11 +34,28 @@
       text-align: center;
       box-shadow: 0 20px 60px rgba(0,0,0,.45);
     }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0d1829;
+      border: 1px solid #1e2d45;
+      border-radius: 999px;
+      padding: 6px 14px 6px 8px;
+      margin-bottom: 14px;
+      font-size: .9rem;
+    }
     img.icon {
       width: 96px; height: 96px;
       border-radius: 22px;
       object-fit: cover;
       border: 2px solid var(--gold);
+      background: #060d1a;
+    }
+    img.badge-icon {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      object-fit: cover;
     }
     h1 { color: var(--gold); margin: 16px 0 4px; font-size: 1.6rem; }
     p { color: var(--muted); line-height: 1.7; margin: 8px 0 20px; }
@@ -53,18 +70,57 @@
       font-weight: 700;
       font-size: 1.05rem;
       border: 1px solid var(--gold);
+      cursor: pointer;
     }
     .btn:hover { filter: brightness(1.08); }
     .note { font-size: .85rem; margin-top: 18px; color: var(--muted); }
+    .link {
+      display: block;
+      margin-top: 12px;
+      color: var(--gold);
+      font-size: .9rem;
+      word-break: break-all;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <img class="icon" src="app_icon.png" alt="المسلم الشامل" />
+    <div class="badge">
+      <img class="badge-icon" src="app_icon.png" alt="" onerror="this.style.display='none'" />
+      المسلم الشامل
+    </div>
+    <img class="icon" src="app_icon.png" alt="المسلم الشامل" onerror="this.style.display='none'" />
     <h1>المسلم الشامل</h1>
-    <p>القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية<br/>الإصدار 1.0.2 — بواسطة Ahmed Elshahat</p>
-    <a class="btn" href="muslim_shamel.apk" download>⬇️ تحميل التطبيق (Android)</a>
+    <p>القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية<br/>الإصدار 1.0.3 — بواسطة Ahmed Elshahat</p>
+
+    <!-- مهم: يفتح MediaFire مباشرة — مش ملف محلي -->
+    <a
+      id="downloadBtn"
+      class="btn"
+      href="https://www.mediafire.com/file/50mswo7zlt7lg1z/muslim_shamel.apk/file"
+      target="_blank"
+      rel="noopener noreferrer"
+    >⬇️ تحميل التطبيق (Android)</a>
+
+    <a class="link" href="https://www.mediafire.com/file/50mswo7zlt7lg1z/muslim_shamel.apk/file" target="_blank" rel="noopener noreferrer">
+      أو افتح رابط MediaFire من هنا
+    </a>
+
     <p class="note">مجاني بالكامل — لو ظهر تحذير من النظام اختر «تثبيت على أي حال» لأن التطبيق خارج متجر بلاي.</p>
   </div>
+
+  <script>
+    // ضمان إن الزر يروح MediaFire حتى لو المتصفح حاول يحفظ كملف
+    var MF = "https://www.mediafire.com/file/50mswo7zlt7lg1z/muslim_shamel.apk/file";
+    var btn = document.getElementById("downloadBtn");
+    if (btn) {
+      btn.setAttribute("href", MF);
+      btn.removeAttribute("download");
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.open(MF, "_blank");
+      });
+    }
+  </script>
 </body>
 </html>
