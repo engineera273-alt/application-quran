@@ -12,6 +12,7 @@
       --gold: #d4af37;
       --text: #eee8d8;
       --muted: #9ca3af;
+      --ios: #1c1c1e;
     }
     * { box-sizing: border-box; }
     body {
@@ -59,18 +60,24 @@
     }
     h1 { color: var(--gold); margin: 16px 0 4px; font-size: 1.6rem; }
     p { color: var(--muted); line-height: 1.7; margin: 8px 0 20px; }
+    .btns { display: flex; flex-direction: column; gap: 12px; }
     .btn {
       display: inline-block;
       width: 100%;
       padding: 14px 18px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--green), #0a3d25);
       color: white;
       text-decoration: none;
       font-weight: 700;
       font-size: 1.05rem;
       border: 1px solid var(--gold);
       cursor: pointer;
+    }
+    .btn-android {
+      background: linear-gradient(135deg, var(--green), #0a3d25);
+    }
+    .btn-ios {
+      background: linear-gradient(135deg, #2c2c2e, var(--ios));
     }
     .btn:hover { filter: brightness(1.08); }
     .note { font-size: .85rem; margin-top: 18px; color: var(--muted); }
@@ -93,24 +100,33 @@
     <h1>المسلم الشامل</h1>
     <p>القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية<br/>الإصدار 1.0.3 — بواسطة Ahmed Elshahat</p>
 
-    <!-- مهم: يفتح MediaFire مباشرة — مش ملف محلي -->
-    <a
-      id="downloadBtn"
-      class="btn"
-      href="https://www.mediafire.com/file/0ghelpr4v2j8z2p/muslim_shamel.apk/file"
-      target="_blank"
-      rel="noopener noreferrer"
-    >⬇️ تحميل التطبيق (Android)</a>
+    <div class="btns">
+      <a
+        id="downloadBtn"
+        class="btn btn-android"
+        href="https://www.mediafire.com/file/0ghelpr4v2j8z2p/muslim_shamel.apk/file"
+        target="_blank"
+        rel="noopener noreferrer"
+      >⬇️ تحميل Android</a>
+
+      <a
+        id="iosBtn"
+        class="btn btn-ios"
+        href="./ios/"
+      >🍎 فتح نسخة iPhone</a>
+    </div>
 
     <a class="link" href="https://www.mediafire.com/file/0ghelpr4v2j8z2p/muslim_shamel.apk/file" target="_blank" rel="noopener noreferrer">
-      أو افتح رابط MediaFire من هنا
+      أو افتح رابط MediaFire (Android) من هنا
     </a>
 
-    <p class="note">مجاني بالكامل — لو ظهر تحذير من النظام اختر «تثبيت على أي حال» لأن التطبيق خارج متجر بلاي.</p>
+    <p class="note">
+      Android: مجاني بالكامل — لو ظهر تحذير اختر «تثبيت على أي حال».<br/>
+      iPhone: افتح النسخة من سفاري ثم «مشاركة → إضافة إلى الشاشة الرئيسية» عشان تبقى زي التطبيق.
+    </p>
   </div>
 
   <script>
-    // ضمان إن الزر يروح MediaFire حتى لو المتصفح حاول يحفظ كملف
     var MF = "https://www.mediafire.com/file/0ghelpr4v2j8z2p/muslim_shamel.apk/file";
     var btn = document.getElementById("downloadBtn");
     if (btn) {
