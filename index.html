@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>المسلم الشامل — تحميل التطبيق</title>
+  <title>المسلم الشامل — تحميل التطبيق (Android & iOS)</title>
   <style>
     :root {
       --bg: #060d1a;
@@ -12,7 +12,7 @@
       --gold: #d4af37;
       --text: #eee8d8;
       --muted: #9ca3af;
-      --ios: #1c1c1e;
+      --ios: #007aff;
     }
     * { box-sizing: border-box; }
     body {
@@ -24,10 +24,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 20px 16px;
     }
     .card {
-      width: min(420px, 100%);
+      width: min(480px, 100%);
       background: var(--card);
       border: 1px solid #1e2d45;
       border-radius: 24px;
@@ -58,33 +58,66 @@
       border-radius: 8px;
       object-fit: cover;
     }
-    h1 { color: var(--gold); margin: 16px 0 4px; font-size: 1.6rem; }
-    p { color: var(--muted); line-height: 1.7; margin: 8px 0 20px; }
-    .btns { display: flex; flex-direction: column; gap: 12px; }
+    h1 { color: var(--gold); margin: 16px 0 4px; font-size: 1.7rem; }
+    p.desc { color: var(--muted); line-height: 1.7; margin: 8px 0 20px; font-size: 0.95rem; }
+    .btns { display: flex; flex-direction: column; gap: 14px; }
     .btn {
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       width: 100%;
-      padding: 14px 18px;
+      padding: 15px 18px;
       border-radius: 14px;
       color: white;
       text-decoration: none;
       font-weight: 700;
       font-size: 1.05rem;
-      border: 1px solid var(--gold);
+      border: 1px solid transparent;
       cursor: pointer;
+      transition: transform 0.2s, filter 0.2s;
     }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
     .btn-android {
       background: linear-gradient(135deg, var(--green), #0a3d25);
+      border-color: var(--gold);
     }
     .btn-ios {
-      background: linear-gradient(135deg, #2c2c2e, var(--ios));
-      opacity: .75;
-      cursor: default;
-      border-style: dashed;
+      background: linear-gradient(135deg, #0051a8, #007aff);
+      border-color: #5ac8fa;
     }
-    .btn:hover { filter: brightness(1.08); }
-    .btn-ios:hover { filter: none; }
-    .note { font-size: .85rem; margin-top: 18px; color: var(--muted); }
+    .ios-box {
+      margin-top: 24px;
+      background: #0b1524;
+      border: 1px solid #1c2b42;
+      border-radius: 16px;
+      padding: 18px;
+      text-align: right;
+      font-size: 0.9rem;
+    }
+    .ios-box h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ios-box p {
+      margin: 4px 0 10px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    .ios-steps {
+      margin: 10px 0 0;
+      padding-right: 18px;
+      color: #94a3b8;
+      line-height: 1.7;
+    }
+    .ios-steps li {
+      margin-bottom: 6px;
+    }
+    .note { font-size: .85rem; margin-top: 18px; color: var(--muted); line-height: 1.5; }
     .link {
       display: block;
       margin-top: 12px;
@@ -98,33 +131,55 @@
   <div class="card">
     <div class="badge">
       <img class="badge-icon" src="app_icon.png" alt="" onerror="this.style.display='none'" />
-      المسلم الشامل
+      المسلم الشامل — الإصدار المحدث
     </div>
+    <br>
     <img class="icon" src="app_icon.png" alt="المسلم الشامل" onerror="this.style.display='none'" />
     <h1>المسلم الشامل</h1>
-    <p>القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية<br/>الإصدار 1.1.1 — بواسطة Ahmed Elshahat</p>
+    <p class="desc">القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية • القبلة<br/>بواسطة Ahmed Elshahat</p>
 
     <div class="btns">
+      <!-- أندرويد -->
       <a
         id="downloadBtn"
         class="btn btn-android"
-        href="https://www.mediafire.com/file/eesvzsmkidn381l/muslim_shamel.apk/file"
+        href="https://www.mediafire.com/file/lmo3b7c2h93o9ag/muslim_shamel.apk/file"
         target="_blank"
         rel="noopener noreferrer"
-      >⬇️ تحميل Android</a>
+      >
+        <span>🤖 تحميل للأندرويد (APK)</span>
+      </a>
 
-      <span class="btn btn-ios" aria-disabled="true">🍎 iPhone — قريباً إن شاء الله</span>
+      <!-- آيفون -->
+      <a
+        class="btn btn-ios"
+        href="https://almuslim-salam.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>🍎 تشغيل / تثبيت الآيفون (iOS)</span>
+      </a>
     </div>
 
-    <a class="link" href="https://www.mediafire.com/file/eesvzsmkidn381l/muslim_shamel.apk/file" target="_blank" rel="noopener noreferrer">
-      أو افتح رابط MediaFire من هنا
-    </a>
+    <!-- صندوق توضيحي لمستخدمي الآيفون -->
+    <div class="ios-box">
+      <h3>🍎 مستخدمي الآيفون (iOS):</h3>
+      <p>
+        نظراً لقيود شركة Apple الحازمة على تثبيت الملفات من خارج متجر App Store الرسمي، تم توفير النسخة الخاصة بالآيفون بصيغة <strong>Web App (PWA)</strong> تعمل بكامل مميزات التطبيق وأيقونته وبدون أي رسوم.
+      </p>
+      <strong>كيف تثبت التطبيق على الآيفون؟</strong>
+      <ol class="ios-steps">
+        <li>اضغط على زر <strong>"تشغيل / تثبيت الآيفون"</strong> أعلاه ليفتح في متصفح Safari.</li>
+        <li>اضغط على زر <strong>المشاركة (Share 📤)</strong> في أسفل الشاشة.</li>
+        <li>اختر <strong>"إضافة إلى الشاشة الرئيسية" (Add to Home Screen)</strong>.</li>
+      </ol>
+    </div>
 
-    <p class="note">مجاني بالكامل — لو ظهر تحذير من النظام اختر «تثبيت على أي حال» لأن التطبيق خارج متجر بلاي.</p>
+    <p class="note">للأندرويد: إذا ظهر تحذير تثبيت من مصدر غير معروف، اختر «التثبيت على أي حال» لأن التطبيق مرفوع مباشرة على MediaFire.</p>
   </div>
 
   <script>
-    var MF = "https://www.mediafire.com/file/eesvzsmkidn381l/muslim_shamel.apk/file";
+    var MF = "https://www.mediafire.com/file/lmo3b7c2h93o9ag/muslim_shamel.apk/file";
     var btn = document.getElementById("downloadBtn");
     if (btn) {
       btn.setAttribute("href", MF);
