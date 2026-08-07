@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,7 +15,11 @@
       --muted: #9ca3af;
       --ios: #007aff;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -26,6 +31,7 @@
       justify-content: center;
       padding: 20px 16px;
     }
+
     .card {
       width: min(480px, 100%);
       background: var(--card);
@@ -33,8 +39,9 @@
       border-radius: 24px;
       padding: 32px 24px;
       text-align: center;
-      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
     }
+
     .badge {
       display: inline-flex;
       align-items: center;
@@ -46,21 +53,42 @@
       margin-bottom: 14px;
       font-size: .9rem;
     }
+
     img.icon {
-      width: 96px; height: 96px;
+      width: 96px;
+      height: 96px;
       border-radius: 22px;
       object-fit: cover;
       border: 2px solid var(--gold);
       background: #060d1a;
     }
+
     img.badge-icon {
-      width: 28px; height: 28px;
+      width: 28px;
+      height: 28px;
       border-radius: 8px;
       object-fit: cover;
     }
-    h1 { color: var(--gold); margin: 16px 0 4px; font-size: 1.7rem; }
-    p.desc { color: var(--muted); line-height: 1.7; margin: 8px 0 20px; font-size: 0.95rem; }
-    .btns { display: flex; flex-direction: column; gap: 14px; }
+
+    h1 {
+      color: var(--gold);
+      margin: 16px 0 4px;
+      font-size: 1.7rem;
+    }
+
+    p.desc {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 8px 0 20px;
+      font-size: 0.95rem;
+    }
+
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
     .btn {
       display: flex;
       align-items: center;
@@ -77,15 +105,22 @@
       cursor: pointer;
       transition: transform 0.2s, filter 0.2s;
     }
-    .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+
     .btn-android {
       background: linear-gradient(135deg, var(--green), #0a3d25);
       border-color: var(--gold);
     }
+
     .btn-ios {
       background: linear-gradient(135deg, #0051a8, #007aff);
       border-color: #5ac8fa;
     }
+
     .ios-box {
       margin-top: 24px;
       background: #0b1524;
@@ -95,6 +130,7 @@
       text-align: right;
       font-size: 0.9rem;
     }
+
     .ios-box h3 {
       margin: 0 0 8px;
       color: var(--gold);
@@ -103,21 +139,31 @@
       align-items: center;
       gap: 8px;
     }
+
     .ios-box p {
       margin: 4px 0 10px;
       color: #cbd5e1;
       line-height: 1.6;
     }
+
     .ios-steps {
       margin: 10px 0 0;
       padding-right: 18px;
       color: #94a3b8;
       line-height: 1.7;
     }
+
     .ios-steps li {
       margin-bottom: 6px;
     }
-    .note { font-size: .85rem; margin-top: 18px; color: var(--muted); line-height: 1.5; }
+
+    .note {
+      font-size: .85rem;
+      margin-top: 18px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
     .link {
       display: block;
       margin-top: 12px;
@@ -127,36 +173,29 @@
     }
   </style>
 </head>
+
 <body>
   <div class="card">
     <div class="badge">
       <img class="badge-icon" src="app_icon.png" alt="" onerror="this.style.display='none'" />
-      المسلم الشامل — الإصدار المحدث
+      المسلم الشامل — الإصدار 1.6.2
     </div>
     <br>
     <img class="icon" src="app_icon.png" alt="المسلم الشامل" onerror="this.style.display='none'" />
     <h1>المسلم الشامل</h1>
-    <p class="desc">القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية • القبلة<br/>بواسطة Ahmed Elshahat</p>
+    <p class="desc">القرآن • مواقيت الصلاة • الأذان • التسبيح • الأدعية • القبلة<br />الإصدار 1.6.2 — بواسطة Ahmed
+      Elshahat</p>
 
     <div class="btns">
       <!-- أندرويد -->
-      <a
-        id="downloadBtn"
-        class="btn btn-android"
-        href="https://www.mediafire.com/file/zivguuke214zsoj/app-release.apk/file"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>🤖 تحميل للأندرويد (APK)</span>
+      <a id="downloadBtn" class="btn btn-android"
+        href="https://www.mediafire.com/file/pv3btc3lmlobm73/المسلم_الشامل_v1.6.2.apk/file" target="_blank"
+        rel="noopener noreferrer">
+        <span>🤖 تحميل للأندرويد (APK) — v1.6.2</span>
       </a>
 
       <!-- آيفون -->
-      <a
-        class="btn btn-ios"
-        href="https://almuslim-salam.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="btn btn-ios" href="https://almuslim-salam.vercel.app/" target="_blank" rel="noopener noreferrer">
         <span>🍎 تشغيل / تثبيت الآيفون (iOS)</span>
       </a>
     </div>
@@ -165,7 +204,8 @@
     <div class="ios-box">
       <h3>🍎 مستخدمي الآيفون (iOS):</h3>
       <p>
-        نظراً لقيود شركة Apple الحازمة على تثبيت الملفات من خارج متجر App Store الرسمي، تم توفير النسخة الخاصة بالآيفون بصيغة <strong>Web App (PWA)</strong> تعمل بكامل مميزات التطبيق وأيقونته وبدون أي رسوم.
+        نظراً لقيود شركة Apple الحازمة على تثبيت الملفات من خارج متجر App Store الرسمي، تم توفير النسخة الخاصة بالآيفون
+        بصيغة <strong>Web App (PWA)</strong> تعمل بكامل مميزات التطبيق وأيقونته وبدون أي رسوم.
       </p>
       <strong>كيف تثبت التطبيق على الآيفون؟</strong>
       <ol class="ios-steps">
@@ -175,11 +215,12 @@
       </ol>
     </div>
 
-    <p class="note">للأندرويد: إذا ظهر تحذير تثبيت من مصدر غير معروف، اختر «التثبيت على أي حال» لأن التطبيق مرفوع مباشرة على MediaFire.</p>
+    <p class="note">للأندرويد: إذا ظهر تحذير تثبيت من مصدر غير معروف، اختر «التثبيت على أي حال» لأن التطبيق مرفوع مباشرة
+      على MediaFire.</p>
   </div>
 
   <script>
-    var MF = "https://www.mediafire.com/file/zivguuke214zsoj/app-release.apk/file";
+    var MF = "https://www.mediafire.com/file/pv3btc3lmlobm73/المسلم_الشامل_v1.6.2.apk/file";
     var btn = document.getElementById("downloadBtn");
     if (btn) {
       btn.setAttribute("href", MF);
@@ -191,4 +232,5 @@
     }
   </script>
 </body>
+
 </html>
